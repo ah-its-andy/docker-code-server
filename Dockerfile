@@ -9,7 +9,6 @@ LABEL maintainer="aptalca"
 
 # environment settings
 ENV HOME="/config"
-ENV CODESERVER_PORT = "8443"
 
 RUN \
   echo "**** install node repo ****" && \
@@ -67,4 +66,4 @@ RUN \
 COPY /root /
 
 # ports and volumes
-EXPOSE 8443
+EXPOSE 443
