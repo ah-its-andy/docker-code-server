@@ -62,6 +62,8 @@ RUN \
     /var/lib/apt/lists/* \
     /var/tmp/*
 
+RUN apt-get install -y nginx && apt-get clean 
+
 # add local files
 COPY /root /
 
