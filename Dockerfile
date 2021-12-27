@@ -38,6 +38,7 @@ RUN \
     nodejs \
     sudo \
     yarn && \
+    nginx && \
   echo "**** install code-server ****" && \
   if [ -z ${CODE_RELEASE+x} ]; then \
     CODE_RELEASE=$(curl -sX GET https://registry.yarnpkg.com/code-server \
@@ -61,8 +62,6 @@ RUN \
     /tmp/* \
     /var/lib/apt/lists/* \
     /var/tmp/*
-
-RUN apt-get install -y nginx && apt-get clean 
 
 # add local files
 COPY /root /
