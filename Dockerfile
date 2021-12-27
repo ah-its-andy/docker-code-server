@@ -9,6 +9,7 @@ LABEL maintainer="aptalca"
 
 # environment settings
 ENV HOME="/config"
+ENV CODESERVER_PORT = "8443"
 
 RUN \
   echo "**** install node repo ****" && \
